@@ -1,5 +1,3 @@
-import React from 'react';
-
 import * as SC from './styles';
 
 export type ButtonProps = {
@@ -10,7 +8,7 @@ export type ButtonProps = {
   onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-const Button: React.FC = ({
+const Button = ({
   children,
   size = 'medium',
   fullWidth = false,
