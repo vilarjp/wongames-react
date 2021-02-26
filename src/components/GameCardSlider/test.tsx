@@ -48,6 +48,10 @@ describe('<GameSlider />', () => {
     const { container } = renderWithTheme(<GameCardSlider items={items} />);
 
     expect(container.querySelectorAll('.slick-active')).toHaveLength(4);
+
+    expect(screen.getByLabelText(/next games/i)).toHaveStyle({
+      color: theme.colors.black,
+    });
   });
 
   it('should render white arrows if color passed', () => {
