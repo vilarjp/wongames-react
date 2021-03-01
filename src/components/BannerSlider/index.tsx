@@ -1,7 +1,7 @@
 import Banner, { BannerProps } from 'components/Banner';
 import Slider, { SliderSettings } from 'components/Slider';
 
-import * as S from './styles';
+import * as SC from './styles';
 
 export type BannerSliderProps = {
   items: BannerProps[];
@@ -25,13 +25,13 @@ const settings: SliderSettings = {
 };
 
 const BannerSlider = ({ items }: BannerSliderProps) => (
-  <S.Wrapper>
+  <SC.Wrapper>
     <Slider settings={settings}>
       {items.map((item) => (
         <Banner key={item.title} {...item} />
       ))}
     </Slider>
-  </S.Wrapper>
+  </SC.Wrapper>
 );
 
 export default BannerSlider;
