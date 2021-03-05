@@ -132,7 +132,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
 
     ${RegisterBox} {
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
-      transition: transform 0.3s ease-in-out;
+      transition: transform ${theme.transition.default};
     }
   `}
 `;

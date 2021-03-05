@@ -1,4 +1,5 @@
-import { screen, fireEvent } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { renderWithTheme } from 'utils/tests/helpers';
 
 import GameCard from '.';
@@ -64,7 +65,7 @@ describe('<GameCard />', () => {
     const onFav = jest.fn();
     renderWithTheme(<GameCard {...props} favorite onFav={onFav} />);
 
-    fireEvent.click(screen.getAllByRole('button')[0]);
+    userEvent.click(screen.getAllByRole('button')[0]);
 
     expect(onFav).toBeCalled();
   });
